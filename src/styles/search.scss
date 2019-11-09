@@ -1,0 +1,111 @@
+.search-bar {
+    padding: 20px;
+    background-color: #000000;
+
+    input{
+        padding: 10px;
+        width: 50%;
+        font-size: 20px;
+
+        &::placeholder {
+            color: #e5e5e5;
+        }
+    }
+
+    .search-bar-buttons {
+        margin-left: -60px;
+
+        .icon {
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.search-result {
+    margin: 10px;
+
+    .search-day {
+        background-color: #80d6e8;
+        color: #fff;
+        padding: 5px;
+        flex-grow: 1;
+        flex-basis: 20%;
+
+        .day-detail {
+            font-size: 12px;
+            border-radius: 2px;
+            padding: 2px;
+            margin: 2px;
+            color: #333333;
+
+            > div {
+                margin: 0px 5px;
+            }
+
+            .min-temp {
+                padding: 5px;
+                border-radius: 15px;
+                background-color: #ffffff;
+            }
+
+            .max-temp {
+                padding: 5px;
+                border-radius: 15px;
+                background-color: #fff7c2;
+            }
+        }
+    }
+
+    .search-time-breakdown {
+        flex-grow: 2;
+
+        .search-time {
+            padding: 15px;
+            margin: 0px 2px;
+            background-color: #abf5e5;
+            font-size: 12px;
+
+            &.time-dawn {
+                background-color: #abf5e5;
+            }
+
+            &.time-day {
+                background-color: #fceb8d;
+            }
+
+            &.time-night {
+                background-color: #a8a89b;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .search-bar input {
+        width: 100%;
+    }
+    .search-result {
+        .search-day {
+            font-size: 12px;
+            padding: 2px;
+        }
+
+        .search-time-breakdown {
+            .search-time {
+                padding: 0px;
+                margin: 0px;
+
+                div {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .day-detail {
+        display:none;
+    }
+}
