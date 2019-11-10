@@ -10,7 +10,7 @@ const Result = (props) => {
     return (
         <div className='search-result flex-container-row justify-flex-space-evenly'>
             <ResultDay data={data}/>
-            <div className='search-time-breakdown flex-container-row justify-flex-space-evenly'>
+            <div className='search-time-breakdown flex-container-row justify-flex-left'>
             {data.weather.map(weather => <ResultTime weather={weather} key={weather.time}/>)}
             </div>
         </div>
