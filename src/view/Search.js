@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const onKeyPress = (searchWeather) => (event) => {
     if (event.charCode === 13 || event.keyCode === 13) {
@@ -25,6 +26,12 @@ const Search = (props) => {
             </div>
         </div>
     )
+};
+
+Search.propTypes = {
+    value: PropTypes.string.isRequired,
+    searchWeather: PropTypes.func.isRequired,
+    setValue: PropTypes.func.isRequired
 };
 
 export default Search;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const ResultTime = (props) => {
     const {
@@ -12,6 +13,10 @@ const ResultTime = (props) => {
             <div className='time'>{weather.time}</div>
         </span>
     )
+};
+
+ResultTime.propTypes = {
+    weather: PropTypes.object.isRequired
 };
 
 export default ResultTime;

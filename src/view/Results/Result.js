@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ResultDay from "./ResultDay";
 import ResultTime from "./ResultTime";
 
@@ -15,6 +16,10 @@ const Result = (props) => {
             </div>
         </div>
     )
+};
+
+Result.propTypes = {
+    data: PropTypes.object.isRequired
 };
 
 export default Result;

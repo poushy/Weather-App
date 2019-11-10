@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ResultDay = (props) => {
     const {
@@ -30,6 +31,10 @@ const ResultDay = (props) => {
                 </div>
             </div>
     )
+};
+
+ResultDay.propTypes = {
+    data: PropTypes.object.isRequired
 };
 
 export default ResultDay;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Result from "./Result";
 
 const Results = (props) => {
@@ -13,6 +14,11 @@ const Results = (props) => {
             <div>{message}</div>
         </div>
     )
+};
+
+Results.propTypes = {
+    results: PropTypes.array.isRequired,
+    message: PropTypes.string.isRequired
 };
 
 export default Results;
